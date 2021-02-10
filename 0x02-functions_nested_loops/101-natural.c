@@ -1,23 +1,36 @@
 #include <stdio.h>
+/**
+ * multiple - return sum of 3 and 5 multiple
+ *
+ * @limit: limit for loop
+ *
+ * Return: int - sum.
+ */
+int multiple(int limit)
+{
+	int n, sum = 0;
+
+	for (n = 1; n < limit; n++)
+	{
+		if (n % 3 == 0 || n % 5 == 0)
+		{
+			sum += n;
+		}
+	}
+
+	return (sum);
+}
 
 /**
- * main - Prints the sum of natural numbers multiple of 3 and 5 below 1024
+ * main - check the code for Holberton School students.
  *
- *
+ * Return: Always 0.
  */
-
-
 int main(void)
 {
-	int sum = 0;
-	int i;
+	int n = multiple(1024);
 
-	for (i = 0; i < 1024; i++)
-	{
-		if ((i % 3) == 0 || (i % 5) == 0)
-			sum += i;
-	}
-	printf("%d\n", sum);
+	printf("%d\n", n);
 
 	return (0);
 }
