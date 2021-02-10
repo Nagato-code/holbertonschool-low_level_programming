@@ -3,25 +3,31 @@
 #include <time.h>
 
 /**
- * main - Tests the last digit against conditions
+ * 1-last_digit
  *
- * Return: 0 if Success
+ * My code C
  */
 
 int main(void)
 {
-	int n, modulo;
+	int n, a;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	modulo = n % 10;
+      a = n % 10;
 
-	if (modulo > 5)
-		printf("Last digit of %d is %d and is greater than 5\n", n, modulo);
-	else if (modulo == 0)
-		printf("Last digit of %d is %d and is 0\n", n, modulo);
-	else if (modulo < 6 && modulo != 0)
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, modulo);
+ if (a > 5)
+
+ printf("% dand is greater than 5\n", n);
+
+else if (a == 0)
+
+	printf("%d and is 0\n");
+
+else if (a < 6)
+
+	printf("%d and is less than 6 and not 0\n");
+
 	return (0);
 }
